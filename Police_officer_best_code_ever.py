@@ -1,18 +1,15 @@
-drivers_liscense = input ("This is the police! Do you have your drivers license?")
-if drivers_liscense == 'yes':
+drivers_license = input("This is the police! Do you have your drivers license? ").lower()
+
+if drivers_license == 'yes':
     print("Ok, you're good to go")
+elif drivers_license == 'no':
+    print("You're gonna have to come with us")
+else:
+    print("You're under arrest for not responding to police")
 
-abuse_keyword = ["shit", "retard", "asshole"]
+abuse_keyword = ["shit", "retard", "asshole", "stupid", "idiot"]
 
-if drivers_liscense == 'no':
-       print("You're gonna have to come with us")
+user_input = input("Enter a word: ").lower()
 
-if drivers_liscense != 'yes' and drivers_liscense != 'no':
-        print("You're under arrest for not responding to police")
-
-
-abuse_keyword = 'abuse'
-user_input = input("Enter a word: ") 
-
-if user_input == abuse_keyword:
+if user_input in abuse_keyword:
     print('You are under arrest for abusing a police officer')
